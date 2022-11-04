@@ -1,99 +1,152 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 #container {
-    top: 100px;
-    width: 1200px;
-    height: 600px;
-    position: relative;
-    perspective: 600px;
-    /* half the width */
-    border: 2px solid green;
-  }
-  #room {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-origin: 50% 80% 600px;
-    transform-style: preserve-3d;
-  }
-  #room figure {
-    margin: 0;
-    display: block;
-    position: absolute;
-    border: 2px solid green;
-    font: 400px"calibri";
-    text-align: center;
-  }
-  #room .n,
-  .e,
-  .s,
-  .w {
-    width: 1196px;
-    height: 596px;
-  }
-  #room .n {
-    background-color: rgba(255, 0, 0, 0.3);
-  }
-  #room .e {
-    background-color: rgba(255, 255, 0, 0.3);
-  }
-  #room .s {
-    background-color: rgba(0, 255, 255, 0.3);
-  }
-  #room .w {
-    background-color: rgba(0, 0, 255, 0.3);
-  }
-  #room .t,
-  .b {
-    width: 1196px;
-    height: 1196px;
-    top: -300px;
-    background-color: rgba(200, 200, 200, 0.5);
-  }
-  /* transform & inverse */
+  /* top: 100px; */
+  width: 300px;
+  height: 250px;
+  /* width: 1200px; */
+  /* height: 600px; */
+  position: relative;
+  perspective: 100px;
+  /* perspective: 600px; */
+  /* half the width */
+  /* border: 2px solid green; */
+  overflow: hidden;
+}
+#room {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-origin: 125px 0px 100px;
+  /* transform-origin: 50% 50% 50%; */
+  /* transform-origin: 50% 80% 600px; */
+  transform-style: preserve-3d;
   
-  #room .n {
-    transform: rotateY(0deg) translateZ(0px);
+}
+#room figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  /* border: 2px solid green; */
+  font: 40px"calibri";
+  text-align: center;
+}
+#room .n,
+.e,
+.s,
+.w {
+    width: 300px;
+    height: 250px;
+    border: 1px solid gray;
+    /* width: 1196px; */
+  /* height: 596px; */
+}
+#room .n {
+  /* background-color: rgba(255, 0, 0, 0.3); */
+}
+#room .e {
+  background-color: rgba(255, 255, 0, 0.3);
+  
+  background-image: url("https://5.imimg.com/data5/SELLER/Default/2021/8/NC/HI/LK/125151631/wall-and-floor-tiles-for-bathroom-500x500-1000x1000.jpg");
+  background-repeat: repeat round;
+  background-size: 30px 20px;
+}
+#room .s {
+  background-color: rgba(0, 255, 255, 0.3);
+  background-image: url("https://images.unsplash.com/photo-1580398562556-d33329a0f29b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGlsZXxlbnwwfHwwfHw%3D&w=1000&q=80");
+  background-repeat: repeat round;
+  background-size: 30px 20px;
+}
+#room .w {
+  /* background-color: rgba(0, 0, 255, 0.3); */
+  background-image: url("https://colorceramics.com/public/uploads/all/NXfC6L8AQ96Oh6JuPBquFG7ZcNLJKJTmG3d0PPrB.jpg");
+  background-repeat: repeat round;
+  background-size: 30px 20px;
+  
+}
+#room .t{
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  background-color: rgba(200, 200, 200, 0.5);
+}
+.b{
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  background-image: url("https://i.pinimg.com/474x/b7/e0/77/b7e07752647345d026e0d4fd024cd99f.jpg");
+  /* background-image: url("https://d2zpvmybpipqvy.cloudfront.net/media/products/tiles/images/products/web/generated_47-7GPBG-13-7GPBG-13.jpg.380x380_q85.jpg"); */
+  background-repeat: repeat round;
+  background-size: 30px 20px;
+}
+/* transform & inverse */
+
+#room .n {
+  /* transform: rotateY(0deg) translateZ(0px); */
+  transform: rotateY(0deg) translateZ(-50px);
+  background-image: url('https://img.edilportale.com/product-thumbs/h_foglie-palazzo-morelli-461728-rele894b7d2.jpg');
+  background-size: 50px 36px;
+
+  
+}
+#room .e {
+  /* transform: rotateY(-90deg) translateZ(-150px) translateX(150px); */
+  transform: rotateY(-90deg) translateZ(-150px) translateX(100px);
+}
+#room .s {
+  transform: rotateY(180deg) translateZ(-250px);
+}
+#room .w {
+  /* transform: rotateY(90deg) translateZ(-150px) translateX(-150px); */
+  transform: rotateY(90deg) translateZ(-150px) translateX(-100px);
+}
+#room .t {
+  /* transform: rotateX(90deg) translateZ(125px) translateY(150px); */
+  transform: rotateX(90deg) translateZ(0px) translateY(100px);
+}
+#room .b {
+  /* transform: rotateX(90deg) translateZ(-125px) translateY(150px); */
+  transform: rotateX(90deg) translateZ(-250px) translateY(100px);
+}
+
+
+
+
+
+
+
+
+
+/* Show */
+#room .show-n {
+  transform: translateZ(0px) rotateY(0deg);
+}
+#room .show-e {
+  transform: translateX(-150px) translateZ(150px) rotateY(90deg);
+}
+#room .show-s {
+  transform: translateZ(300px) rotateY(180deg);
+}
+#room .show-w {
+  transform: translateX(150px) translateZ(150px) rotateY(-90deg);
+}
+#room .show-t {
+  transform: translateY(-150px) translateZ(-125px) rotateX(-90deg);
+}
+#room .show-b {
+  transform: translateY(-150px) translateZ(125px) rotateX(90deg);
+}
+#room {
+  animation: 5s hspinner;
+}
+@keyframes hspinner {
+  from {
+    transform: rotateY(0deg);
   }
-  #room .e {
-    transform: rotateY(-90deg) translateZ(-600px) translateX(600px);
+  to {
+    transform: rotateY(-360deg);
   }
-  #room .s {
-    transform: rotateY(180deg) translateZ(-1200px);
-  }
-  #room .w {
-    transform: rotateY(90deg) translateZ(-600px) translateX(-600px);
-  }
-  #room .t {
-    transform: rotateX(90deg) translateZ(300px) translateY(600px);
-  }
-  #room .b {
-    transform: rotateX(90deg) translateZ(-300px) translateY(600px);
-  }
-  #room .show-n {
-    transform: translateZ(0px) rotateY(0deg);
-  }
-  #room .show-e {
-    transform: translateX(-600px) translateZ(600px) rotateY(90deg);
-  }
-  #room .show-s {
-    transform: translateZ(1200px) rotateY(180deg);
-  }
-  #room .show-w {
-    transform: translateX(600px) translateZ(600px) rotateY(-90deg);
-  }
-  #room .show-t {
-    transform: translateY(-600px) translateZ(-300px) rotateX(-90deg);
-  }
-  #room .show-b {
-    transform: translateY(-600px) translateZ(300px) rotateX(90deg);
-  }
-  #room {
-    animation: 5s hspinner;
-  }
-  @keyframes hspinner {
-    from {
-      transform: rotateY(0deg);
-    }
-    to {
-      transform: rotateY(-360deg);
-    }
-  }
+}
