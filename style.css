@@ -20,7 +20,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  transform-origin: 125px 0px 100px;
+  transform-origin: 150px 0px 100px;
   /* transform-origin: 50% 50% 50%; */
   /* transform-origin: 50% 80% 600px; */
   transform-style: preserve-3d;
@@ -139,7 +139,9 @@
 #room .show-b {
   transform: translateY(-150px) translateZ(125px) rotateX(90deg);
 }
-#room {
+
+
+/* #room {
   animation: 5s hspinner;
 }
 @keyframes hspinner {
@@ -149,4 +151,8 @@
   to {
     transform: rotateY(-360deg);
   }
-}
+} */
+
+/* #room{
+  transform: rotateY(180deg);
+} */
